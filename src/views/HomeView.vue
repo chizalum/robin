@@ -729,10 +729,11 @@ display: block;
 .dropcontainer{
 width: 100%;
 max-width: 1238px;
-height: 1366px;
+height: auto;
 background: #F5F7FC;
 border-radius: 25px;
 margin: 95px auto 0 auto;
+padding-bottom: 116px
 }
 
 #common{
@@ -871,6 +872,7 @@ width: 50%;
 
 #chats{
 width: 100%;
+margin-top: 46px;
 }
 
 #chattext{
@@ -883,7 +885,7 @@ color: #000000;
 opacity: 0.4;
 margin-block-start: 0;
 margin-block-end: 0;
-margin: 73px auto 0 217px;
+margin: 119px auto 0 217px;
 }
 
 #see{
@@ -1251,7 +1253,7 @@ color: #000000;
 opacity: 0.4;
 margin-block-start: 0;
 margin-block-end: 0;
-margin: 73px auto 0 auto;
+margin: 119px auto 0 auto;
 width: 329px
 }
 
@@ -1318,6 +1320,7 @@ margin-block-end: 0;
 #chats{
 width: 100%;
 height: auto;
+margin-top: 46px;
 }
 
 .home{
