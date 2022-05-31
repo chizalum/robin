@@ -1,16 +1,16 @@
 <template>
   <div class="top">
-    <nav>
       <img src="@/assets/robin.png" alt="logo" id="robin">
-      <router-link to="/" id="home">Pricing</router-link> 
-      <router-link to="/" id="home">Docs</router-link>
-      <router-link to="/" id="home">Use Cases</router-link>
-      <router-link to="/" id="home">SDKs</router-link>
-      <router-link to="/" id="home">Enterprise</router-link>
-      <router-link to="/" id="home">Try Demo</router-link>
-      <router-link to="/" id="home">Sign In</router-link> 
-      <router-link to="/" id="home">Get Started</router-link>
-    </nav>
+      <router-link to="/" class="home1">Pricing</router-link> 
+      <router-link to="/" class="home">Docs</router-link>
+      <router-link to="/" class="home">Use Cases</router-link>
+      <router-link to="/" class="home">SDKs</router-link>
+      <router-link to="/" class="home">Enterprise</router-link>
+      <router-link to="/" class="home">Try Demo</router-link>
+      <router-link to="/" class="home2">Sign In</router-link> 
+      <div id="get">
+        <router-link to="/" id="gettext">Get Started</router-link>
+      </div>
   </div>
   <div class="firstdiv">
     <h1 id="simple">Simple & Transparent Pricing. No surprises.</h1>
@@ -171,9 +171,12 @@
       <p class="droptext">Is every feature automatically included in the enterprise plan?</p>
       <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask">
     </div>
-    <div class="dropcontent">
+    <div class="dropcontent" @click="toggle">
       <p class="droptext">Do the prices listed on the pricing page include tax?</p>
       <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask">
+    </div>
+    <div class="droppingsblock">
+      <p v-if="active" class="droppings">Tax is not included in the prices listed on the pricing page. Tax will be included in your billing receipts.</p>
     </div>
     <p id="got">Got additional questions?</p>
     <p id="we">We would love to have a chat with you.</p>
@@ -192,11 +195,55 @@
         <img src="@/assets/blackarrow.png" alt="arrow" id="blackarrow">
       </div>
     </div>
-    <img src="@/assets/chats.png" alt="arrow" id="chats">
+    <div class="chatscontainer">
+      <img src="@/assets/chats.png" alt="chatbox" id="chats">
+    </div>
   </div>
   <div class="bluebox">
-    <h2 id="ready">Ready to have a chat?</h2>
-    <p id="love">We'd love to talk about your messaging strategy and help make your software more conversational.</p>
+    <div class="firstcolumn"> 
+      <div class="firstone">
+        <h2 id="ready">Ready to have a chat?</h2>
+        <p id="love">We'd love to talk about your messaging strategy and help make your software more conversational.</p>
+      </div>
+      <div class="secondone">
+        <div id="talkbtn">
+          <p id="talkrbn">Talk To Sales</p>
+          <img src="@/assets/whitearrow.png" alt="arrow" id="whitearrow">
+        </div>
+        <div id="trybtn">
+          <p id="tryrbn">Try Robin</p>
+          <img src="@/assets/whitearrow.png" alt="arrow" id="whitearrow1">
+        </div>
+      </div>
+    </div>
+    <hr class="bluerule">
+    <div class="lastflex">
+      <div class="rob">
+        <img src="@/assets/robin1.png" alt="arrow" id="robin1">
+      </div>
+      <div class="robdets1">
+        <router-link to="/" class="robtext1">Resources</router-link>
+        <router-link to="/" class="robtext">Documentation</router-link>
+        <router-link to="/" class="robtext">Developer API</router-link>
+        <router-link to="/" class="robtext">Product Demos</router-link>
+        <router-link to="/" class="robtext">Help Center</router-link>
+        <router-link to="/" class="robtext">System Status</router-link>
+      </div>
+      <div class="robdets2">
+        <router-link to="/" class="robtext1">Company</router-link>
+        <router-link to="/" class="robtext">About</router-link>
+        <router-link to="/" class="robtext">Security & Privacy</router-link>
+        <router-link to="/" class="robtext">Blog</router-link>
+      </div>
+    </div>
+    <hr class="lastrule">
+    <div class="specialflex">
+      <router-link to="/" class="specialtext1">© 2021 Robin Inc.</router-link>
+      <router-link to="/" class="specialtext">Terms of Service</router-link>
+      <router-link to="/" class="specialtext">Privacy Policy</router-link>
+      <router-link to="/" class="specialtext">Cookie Settings</router-link>
+      <router-link to="/" class="specialtext4">Sub-Processors</router-link>
+    </div>
   </div>
 </template>
 
@@ -206,11 +253,47 @@
 export default {
   name: 'HomeView',
   components: {
-  }
+  },
+  data(){
+    return {
+    active: false
+    }
+  },
+  methods: {
+      toggle () {
+        this.active = !this.active
+      }
+    }
 }
 </script>
 
 <style scoped>
+.droppings{
+font-family: 'Google Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 19px;
+line-height: 30px;
+color: #000000;
+opacity: 0.8;
+margin-block-start: 0;
+margin-block-end: 0;
+background: #FFFFFF;
+padding: 27px 35px 37px 50px;
+overflow-wrap: normal; 
+}
+
+.droppingsblock{
+width: 879px;
+background: #FFFFFF;
+margin: 0 auto 0 auto;
+overflow-wrap: normal;
+display: flex;
+flex-direction: row;
+margin-block-start: 0;
+margin-block-end: 0;
+}
+
 .top{
 position: fixed;
 width: 100%;
@@ -219,27 +302,86 @@ left: 0px;
 top: 0px;
 background: #FFFFFF;
 box-shadow: 0px 10px 20px rgba(0, 104, 255, 0.09);
-display: inline-block;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
 z-index: 1000;
+overflow-wrap: normal;
 }
 
-.top router-link-active{
+.home{
+text-decoration: none;
+font-family: 'Zona Pro';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+color: #000000;
+opacity: 0.6;
+margin-left: 66px;
+}
 
+.home1{
+text-decoration: none;
+font-family: 'Zona Pro';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+color: #000000;
+opacity: 0.2;
+margin-left: 151px;
+}
+
+.home2{
+font-family: 'Google Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 18px;
+text-align: center;
+color: #476BD2;
+margin-left: 148px;
+text-decoration: none;
+}
+
+#get{
+width: 131px;
+height: 40px;
+background: #476BD2;
+border-radius: 30.5px;
+margin-left: 24px;
+text-align: center;
+}
+
+#gettext{
+font-family: 'Google Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 18px;
+text-align: center;
+color: #FFFFFF;
+text-decoration: none;
+line-height: 40px;
 }
 
 #robin{
-padding-left: px;
-margin-top: 16px;
+padding-left: 79px;
+margin-block-start: 0;
+margin-block-end: 0;
 }
 
 .firstdiv{
+width: 100%;
 text-align: center;
 }
 
 #simple{
 width: 100%;
 max-width: 720px;
-margin: 228px auto 28px;
+margin: 228px auto 28px auto;
 font-family: 'Zona Pro';
 font-style: normal;
 font-weight: 700;
@@ -282,7 +424,7 @@ padding-left: 44px;
 }
 
 .boxes{
-margin: auto;
+margin: 0 auto 0 auto;
 width: 100%;
 max-width: 1294px;
 display: flex;
@@ -297,6 +439,26 @@ height: 499px;
 background: #F5F7FC;
 border: 1px solid #4568D1;
 border-radius: 25px;
+}
+
+#box1:hover{
+width: 345px;
+height: 519px;
+}
+
+#box2:hover{
+width: 345px;
+height: 519px;
+}
+
+#box3:hover{
+width: 345px;
+height: 519px;
+}
+
+#box4:hover{
+width: 345px;
+height: 519px;
 }
 
 #box2{
@@ -565,12 +727,12 @@ display: block;
 }
 
 .dropcontainer{
-width: 1238px;
-max-width: 100%;
+width: 100%;
+max-width: 1238px;
 height: 1366px;
 background: #F5F7FC;
 border-radius: 25px;
-margin: 95px auto;
+margin: 95px auto 0 auto;
 }
 
 #common{
@@ -620,7 +782,7 @@ margin-block-end: 0;
 width: 879px;
 height: 86px;
 background: #FFFFFF;
-margin: 20px auto;
+margin: 20px auto 0 auto;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
@@ -689,15 +851,26 @@ width: 10px;
 
 .chatbox{
 width: 100%;
-height: 568px;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
+margin: 0 0 0 0;
+margin-block-start: 0;
+margin-block-end: 0;
 }
 
 .chatters{
+width: 50%;
 display: flex;
 flex-direction: column;
+}
+
+.chatscontainer{
+width: 50%;
+}
+
+#chats{
+width: 100%;
 }
 
 #chattext{
@@ -749,8 +922,6 @@ width: 207px;
 height: 50px;
 border: 1px solid #000000;
 border-radius: 30.5px;
-margin-block-start: 0;
-margin-block-end: 0;
 margin: 82px auto auto 217px;
 display: flex;
 flex-direction: row;
@@ -775,7 +946,570 @@ margin-left: 52px;
 
 .bluebox{
 width: 100%;
-height: 718px;
+height: auto;
 background: #0C1F55;
+margin: auto 0 0 0;
+display: flex;
+flex-direction: column;
+margin-block-start: 0;
+margin-block-end: 0;
+}
+
+.firstcolumn{
+width: 100%;
+display: flex;
+flex-direction: row;
+}
+
+.firstone{
+display: flex;
+flex-direction: column;
+width: 52%;
+align-items: center;
+}
+
+.secondone{
+display: flex;
+flex-direction: row;
+justify-content: center;
+width: 48%;
+}
+
+#ready{
+font-family: 'Zona Pro';
+font-style: normal;
+font-weight: 700;
+font-size: 43px;
+line-height: 51px;
+color: #FFFFFF;
+margin-block-start: 0;
+margin-block-end: 0;
+margin: 84px auto 0 144px;
+Width: 500px;
+}
+
+#love{
+font-family: 'Google Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 35px;
+color: #FFFFFF;
+opacity: 0.7;
+margin-block-start: 0;
+margin-block-end: 0;
+margin: 23px auto 0 144px;
+max-Width: 500px;
+}
+
+#talkbtn{
+width: 207px;
+height: 50px;
+background: #4568D1;
+border-radius: 30.5px;
+display: flex;
+flex-direction: row;
+align-items: center;
+margin-top: 135px;
+margin-right: 15px;
+justify-content: space-between;
+}
+
+#trybtn{
+box-sizing: border-box;
+width: 207px;
+height: 50px;
+border: 1px solid;
+border-radius: 30.5px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+margin-top: 135px;
+}
+
+#talkrbn{
+font-family: 'Google Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+text-align: center;
+color: #FFFFFF;
+margin-left: 21px;
+}
+
+#tryrbn{
+font-family: 'Google Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+text-align: center;
+color: #FFFFFF;
+margin-left: 21px;
+}
+
+#whitearrow{
+margin-right: 25px;
+}
+
+#whitearrow1{
+margin-right: 25px;
+}
+
+hr.bluerule{
+width: 1100px;
+opacity: 0.1;
+border: 1px solid #FFFFFF;
+margin-block-start: 0;
+margin-block-end: 0;
+margin-top: 98px;
+text-align: center;
+}
+
+hr.lastrule{
+width: 1100px;
+opacity: 0.1;
+border: 1px solid #FFFFFF;
+text-align: center;
+}
+
+.lastflex{
+display: flex;
+width: 100%;
+height: 308px;
+flex-direction: row;
+}
+
+.lastflex{
+display: flex;
+flex-direction: row;   
+width: 100%;
+}
+
+.rob{
+}
+
+.robdets1{
+margin-block-start: 0;
+margin-block-end: 0;
+display: flex;
+flex-direction: column;
+margin-right: 119px;
+margin-left: 719px;
+margin-bottom: 0;
+}
+
+.robdets2{
+margin-block-start: 0;
+margin-block-end: 0;
+display: flex;
+flex-direction: column;
+margin-right: 127px;
+margin-bottom: 0
+}
+
+.robtext{
+text-decoration: none;
+width: 100px;
+font-family: 'Zona Pro';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 14px;
+color: #FFFFFF;
+margin-top: 32px;
+}
+
+.robtext1{
+text-decoration: none;
+font-family: 'Google Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 13px;
+line-height: 17px;
+text-transform: uppercase;
+color: #FFFFFF;
+opacity: 0.4;
+margin-top: 50px;
+}
+
+#robin1{
+margin: 43px auto 0 144px;
+}
+
+.lastrule{
+width: 1174px;
+opacity: 0.1;
+border: 1px solid #FFFFFF;
+text-align: cemter;
+margin-block-start: 0;
+margin-block-end: 0;
+margin-top: 50px;
+}
+
+.specialtext{
+text-decoration: none;
+font-family: 'Google Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 17px;
+color: #FFFFFF;
+opacity: 0.5;
+margin-right: 40px;
+}
+
+.specialtext4{
+text-decoration: none;
+font-family: 'Google Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 17px;
+color: #FFFFFF;
+opacity: 0.5;
+}
+
+.specialtext1{
+text-decoration: none;
+font-family: 'Google Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+color: #FFFFFF;
+opacity: 0.3;
+margin-left: 145px; 
+margin-right: 577px;
+}
+
+.specialflex{
+margin-top: 31px;
+margin-bottom: 31px;
+overflow-wrap: normal;
+}
+
+
+@media (max-width: 1240px) {
+
+.boxes{
+margin: 0 auto 0 auto;
+width: 100%;
+display: flex;
+flex-direction: column;
+} 
+
+#box1{
+box-sizing: border-box;
+width: 310px;
+height: 499px;
+background: #F5F7FC;
+border: 1px solid #4568D1;
+border-radius: 25px;
+margin: 0 auto 0 auto;
+}
+
+#box2{
+box-sizing: border-box;
+width: 310px;
+height: 499px;
+background: #F5F7FC;
+border: 1px solid #4568D1;
+border-radius: 25px;
+margin: 10px auto 0 auto;
+}
+
+#box3{
+box-sizing: border-box;
+width: 310px;
+height: 499px;
+background: #F5F7FC;
+border: 1px solid #4568D1;
+border-radius: 25px;
+margin: 10px auto 0 auto;
+}
+
+#box4{
+box-sizing: border-box;
+width: 310px;
+height: 499px;
+background: #F5F7FC;
+border: 1px solid #4568D1;
+border-radius: 25px;
+margin: 10px auto 0 auto;
+}
+
+#chattext{
+font-family: 'Zona Pro';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 18px;
+color: #000000;
+opacity: 0.4;
+margin-block-start: 0;
+margin-block-end: 0;
+margin: 73px auto 0 auto;
+width: 329px
+}
+
+#see{
+font-family: 'Zona Pro';
+font-style: normal;
+font-weight: 700;
+font-size: 35px;
+line-height: 41px;
+color: #000000;
+margin-block-start: 0;
+margin-block-end: 0;
+margin: 22px auto 0 auto;
+max-width: 329px;
+}
+
+#only{
+margin-block-start: 0;
+margin-block-end: 0;
+font-family: 'Google Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 19px;
+line-height: 30px;
+color: #000000;
+opacity: 0.8;
+margin: 37px auto 0 auto;
+max-width: 342px;
+}
+
+.startbtn{
+width: 207px;
+height: 50px;
+border: 1px solid #000000;
+border-radius: 30.5px;
+margin: 82px auto auto auto;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+.dropcontent{
+width: 100%;
+min-height: 86px;
+height: auto;
+background: #FFFFFF;
+margin: 20px auto 0 auto;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+.droppingsblock{
+width: 100%;
+background: #FFFFFF;
+margin: 0 auto 0 auto;
+overflow-wrap: normal;
+display: flex;
+flex-direction: row;
+margin-block-start: 0;
+margin-block-end: 0;
+}
+
+#chats{
+width: 100%;
+height: auto;
+}
+
+.home{
+margin-block-start: 0;
+margin-block-end: 0;
+text-decoration: none;
+font-family: 'Zona Pro';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+color: #000000;
+opacity: 0.6;
+margin-left: 4.58%;
+}
+
+.home1{
+margin-block-start: 0;
+margin-block-end: 0;
+text-decoration: none;
+font-family: 'Zona Pro';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+color: #000000;
+opacity: 0.2;
+margin-left: 10.48%;
+}
+
+.home2{
+margin-block-start: 0;
+margin-block-end: 0;
+font-family: 'Google Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 18px;
+text-align: center;
+color: #476BD2;
+margin-left: 5.28%;
+text-decoration: none;
+}
+
+#robin{
+padding-left: 5.48%;
+margin-block-start: 0;
+margin-block-end: 0;
+}
+
+#get{
+width: 131px;
+height: 40px;
+background: #476BD2;
+border-radius: 30.5px;
+margin-left: 1.7%;
+text-align: center;
+}
+
+.top{
+position: fixed;
+width: 100%;
+min-height: 80px;
+height: auto;
+left: 0px;
+top: 0px;
+background: #FFFFFF;
+box-shadow: 0px 10px 20px rgba(0, 104, 255, 0.09);
+display: flex;
+flex-direction: row;
+align-items: center;
+z-index: 1000;
+overflow-wrap: normal;
+}
+
+.robdets1{
+margin-block-start: 0;
+margin-block-end: 0;
+display: flex;
+flex-direction: column;
+margin-right: 0;
+margin-left: 22%;
+margin-bottom: 0;
+}
+
+.robdets2{
+margin-block-start: 0;
+margin-block-end: 0;
+display: flex;
+flex-direction: column;
+margin-right: 0;
+margin-bottom: 0
+}
+
+#robin1{
+margin: 43px auto 0 ;
+}
+
+.specialtext{
+text-decoration: none;
+font-family: 'Google Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 17px;
+color: #FFFFFF;
+opacity: 0.5;
+margin-right: 2.8%;
+word-wrap: break-word
+}
+
+
+.specialtext1{
+text-decoration: none;
+font-family: 'Google Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+color: #FFFFFF;
+opacity: 0.3;
+margin-left: 0; 
+margin-right: 10%;
+}
+
+.specialflex{
+margin-top: 31px;
+margin-bottom: 31px;
+overflow-wrap: normal;
+}
+
+.secondone{
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+width: auto;
+}
+}
+
+@media (max-width: 4440px){
+#talkbtn{
+width: 147px;
+height: 50px;
+background: #4568D1;
+border-radius: 30.5px;
+display: flex;
+flex-direction: row;
+align-items: center;
+margin-top: 135px;
+margin-right: 15px;
+justify-content: space-between;
+}
+
+#trybtn{
+box-sizing: border-box;
+width: 147px;
+height: 50px;
+border: 1px solid;
+border-radius: 30.5px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+margin-top: 135px;
+}
+
+#ready{
+font-family: 'Zona Pro';
+font-style: normal;
+font-weight: 700;
+font-size: 43px;
+line-height: 51px;
+color: #FFFFFF;
+margin-block-start: 0;
+margin-block-end: 0;
+margin: 84px auto 0;
+Width: 400px;
+}
+
+#love{
+font-family: 'Google Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 35px;
+color: #FFFFFF;
+opacity: 0.7;
+margin-block-start: 0;
+margin-block-end: 0;
+margin: 23px auto 0;
+max-Width: 400px;
+}
 }
 </style>

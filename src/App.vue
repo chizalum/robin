@@ -4,5 +4,15 @@
 </template>
 
 <style>
-  
+body{
+height: 100%;
+width: 100%;
+padding: 0;
+margin: 0;
+overflow-x: hidden;
+}
+
+html{
+overflow-x: hidden; 
+}
 </style>
