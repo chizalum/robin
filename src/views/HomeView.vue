@@ -512,21 +512,25 @@ border-radius: 25px;
 #box1:hover{
 width: 345px;
 height: 519px;
+border: 1px solid #d79232;
 }
 
 #box2:hover{
 width: 345px;
 height: 519px;
+border: 1px solid #d79232;
 }
 
 #box3:hover{
 width: 345px;
 height: 519px;
+border: 1px solid #d79232;
 }
 
 #box4:hover{
 width: 345px;
 height: 519px;
+border: 1px solid #d79232;
 }
 
 #box2{
@@ -566,11 +570,8 @@ font-weight: 700;
 font-size: 18px;
 line-height: 19px;
 color: #EA8D51;
-padding-left: 28px;
 display: inline-block;
-margin-block-start: 0;
-margin-block-end: 0;
-margin-top: 36px;
+margin: 36px auto 0 28px;;
 }
 
 .dollars{
@@ -580,10 +581,7 @@ font-weight: 700;
 font-size: 35px;
 color: #000000;
 line-height: 45px;
-padding-left: 28px;
-margin-block-start: 0;
-margin-block-end: 0;
-margin-top: 8px;
+margin: 8px auto 0 28px;
 }
 
 hr.single{
@@ -591,9 +589,8 @@ width: 257px;
 height: 0px;
 opacity: 0.2;
 border: 1px solid #BBC1D6;
-margin-block-start: 0;
-margin-block-end: 0;
-margin-top: 16px;
+margin: 16px auto 0 auto;
+background: #BBC1D6;
 }
 
 .circle{
@@ -765,6 +762,7 @@ width: 257px;
 height: 0px;
 opacity: 0.2;
 border: 1px solid #BBC1D6;
+background: #BBC1D6;
 }
 
 .opaque{
@@ -858,7 +856,7 @@ justify-content: space-between;
 }
 
 .dropcontent1{
-margin: 35px auto;
+margin: 35px auto 0 auto;
 }
 
 .mask{
@@ -900,7 +898,7 @@ border-radius: 30.5px;
 display: flex;
 flex-direction: row;
 align-items: center;
-margin: 20px auto;
+margin: 20px auto 0 auto;
 }
 
 #contact{
@@ -1032,10 +1030,10 @@ flex-direction: row;
 }
 
 .firstone{
+margin: o auto 0 0;
 display: flex;
 flex-direction: column;
 width: 52%;
-align-items: center;
 }
 
 .secondone{
@@ -1043,6 +1041,7 @@ display: flex;
 flex-direction: row;
 justify-content: space-evenly;
 width: 48%;
+margin: 0 auto 0 auto 0;
 }
 
 #ready{
@@ -1052,8 +1051,7 @@ font-weight: 700;
 font-size: 43px;
 line-height: 51px;
 color: #FFFFFF;
-margin-block-start: 0;
-margin-block-end: 0;
+padding-left: 144px;
 margin: 84px auto 0 144px;
 Width: 500px;
 }
@@ -1068,6 +1066,7 @@ color: #FFFFFF;
 opacity: 0.7;
 margin-block-start: 0;
 margin-block-end: 0;
+padding-left: 144px;
 margin: 23px auto 0 144px;
 max-Width: 500px;
 }
@@ -1131,17 +1130,17 @@ margin-right: 25px;
 hr.bluerule{
 width: 1100px;
 opacity: 0.1;
-color: #FFFFFF;
-margin-block-start: 0;
-margin-block-end: 0;
-margin-top: 98px;
+margin: 98px auto 0 auto;
 text-align: center;
+border: 1px solid #FFFFFF;
+background: #ffffff;
 }
 
 hr.lastrule{
 width: 1100px;
 opacity: 0.1;
-color: #FFFFFF;
+border: 1px solid #FFFFFF;
+background: #ffffff;
 text-align: center;
 }
 
@@ -1153,22 +1152,15 @@ flex-direction: row;
 }
 
 .robdets1{
-margin-block-start: 0;
-margin-block-end: 0;
 display: flex;
 flex-direction: column;
-margin-right: 119px;
-margin-left: 719px;
-margin-bottom: 0;
+margin: 0 119px 0 auto;
 }
 
 .robdets2{
-margin-block-start: 0;
-margin-block-end: 0;
 display: flex;
 flex-direction: column;
-margin-right: 127px;
-margin-bottom: 0
+margin: 0 127px 0 auto;
 }
 
 .robtext{
@@ -1196,9 +1188,12 @@ opacity: 0.4;
 margin-top: 50px;
 }
 
+.rob{
+width: 52%;
+margin: 0 auto 0 0;
+}
+
 #robin1{
-margin-block-start: 0;
-margin-block-end: 0;
 margin: 43px auto 0 144px;
 }
 
@@ -1244,8 +1239,7 @@ font-size: 14px;
 line-height: 18px;
 color: #FFFFFF;
 opacity: 0.3;
-margin-left: 145px; 
-margin-right: 577px;
+margin: 0 577px 0 144px; 
 }
 
 .specialflex{
@@ -1401,26 +1395,24 @@ overflow-wrap: normal;
 }
 
 .robdets1{
-margin-block-start: 0;
-margin-block-end: 0;
 display: flex;
 flex-direction: column;
-margin-right: auto;
-margin-left: auto;
-margin-bottom: 0;
+margin: 0 auto 0 auto;
 }
 
 .robdets2{
-margin-block-start: 0;
-margin-block-end: 0;
 display: flex;
 flex-direction: column;
-margin-right: auto;
-margin-bottom: 0
+margin: 0 auto 0 auto;
+}
+
+.rob{
+margin: 0 auto 0 0;
+width: 52%;
 }
 
 #robin1{
-margin: 43px auto 0 auto ;
+margin: 43px auto 0 0;
 }
 
 .specialtext{
@@ -1499,9 +1491,7 @@ font-weight: 700;
 font-size: 43px;
 line-height: 51px;
 color: #FFFFFF;
-margin-block-start: 0;
-margin-block-end: 0;
-margin: 84px auto 0;
+margin: 84px auto 0 0;
 Width: 400px;
 }
 
@@ -1513,9 +1503,7 @@ font-size: 20px;
 line-height: 35px;
 color: #FFFFFF;
 opacity: 0.7;
-margin-block-start: 0;
-margin-block-end: 0;
-margin: 23px auto 0;
+margin: 23px auto 0 0;
 max-Width: 400px;
 }
 }
