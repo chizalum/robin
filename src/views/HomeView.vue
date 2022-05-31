@@ -1,15 +1,21 @@
 <template>
   <div class="top">
-      <img src="@/assets/robin.png" alt="logo" id="robin">
-      <router-link to="/" class="home1">Pricing</router-link> 
-      <router-link to="/" class="home">Docs</router-link>
-      <router-link to="/" class="home">Use Cases</router-link>
-      <router-link to="/" class="home">SDKs</router-link>
-      <router-link to="/" class="home">Enterprise</router-link>
-      <router-link to="/" class="home">Try Demo</router-link>
-      <router-link to="/" class="home2">Sign In</router-link> 
-      <div id="get">
-        <router-link to="/" id="gettext">Get Started</router-link>
+      <div class="robincontainer">
+        <img src="@/assets/robin.png" alt="logo" id="robin">
+      </div>
+      <div class="routes">
+        <router-link to="/" class="home1">Pricing</router-link> 
+        <router-link to="/" class="home">Docs</router-link>
+        <router-link to="/" class="home">Use Cases</router-link>
+        <router-link to="/" class="home">SDKs</router-link>
+        <router-link to="/" class="home">Enterprise</router-link>
+        <router-link to="/" class="home" tag="button">Try Demo</router-link>
+      </div>
+      <div class="routes2">
+        <router-link to="/" class="home2">Sign In</router-link> 
+        <div id="get">
+          <router-link to="/" id="gettext" tag="button">Get Started</router-link>
+        </div>
       </div>
   </div>
   <div class="firstdiv">
@@ -147,36 +153,54 @@
   <div class="dropcontainer">
     <h3 id="common">Commonly asked questions</h3>
     <p id="ship">Ship in-app chat messaging with all the features your users expect.</p>
-    <div class="dropcontent dropcontent1">
+    <div class="dropcontent dropcontent1" @click="toggle1">
       <p class="droptext">How is MAU calculated?</p>
       <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask">
     </div>
-    <div class="dropcontent">
+    <div class="droppingsblock" v-if="active1">
+      <p class="droppings">Tax is not included in the prices listed on the pricing page. Tax will be included in your billing receipts.</p>
+    </div>
+    <div class="dropcontent" @click="toggle2">
       <p class="droptext">What is the difference between Starter, Pro, and Enterprise plans?</p>
       <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask">
     </div>
-    <div class="dropcontent">
+    <div class="droppingsblock" v-if="active2" >
+      <p class="droppings">Tax is not included in the prices listed on the pricing page. Tax will be included in your billing receipts.</p>
+    </div>
+    <div class="dropcontent" @click="toggle3">
       <p class="droptext">What happens if I hit my MAU limit?</p>
       <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask">
     </div>
-    <div class="dropcontent">
+    <div class="droppingsblock" v-if="active3">
+      <p class="droppings">Tax is not included in the prices listed on the pricing page. Tax will be included in your billing receipts.</p>
+    </div>
+    <div class="dropcontent" @click="toggle4">
       <p class="droptext">How do I purchase higher levels of support?</p>
       <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask">
     </div>
-    <div class="dropcontent">
+    <div class="droppingsblock" v-if="active4">
+      <p class="droppings">Tax is not included in the prices listed on the pricing page. Tax will be included in your billing receipts.</p>
+    </div>
+    <div class="dropcontent" @click="toggle5">
       <p class="droptext">What other limits do I need to be aware of?</p>
       <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask">
     </div>
-    <div class="dropcontent">
+    <div class="droppingsblock" v-if="active5">
+      <p class="droppings">Tax is not included in the prices listed on the pricing page. Tax will be included in your billing receipts.</p>
+    </div>
+    <div class="dropcontent" @click="toggle6">
       <p class="droptext">Is every feature automatically included in the enterprise plan?</p>
       <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask">
+    </div>
+    <div class="droppingsblock" v-if="active6">
+      <p class="droppings">Tax is not included in the prices listed on the pricing page. Tax will be included in your billing receipts.</p>
     </div>
     <div class="dropcontent" @click="toggle">
       <p class="droptext">Do the prices listed on the pricing page include tax?</p>
       <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask">
     </div>
-    <div class="droppingsblock">
-      <p v-if="active" class="droppings">Tax is not included in the prices listed on the pricing page. Tax will be included in your billing receipts.</p>
+    <div class="droppingsblock" v-if="active">
+      <p class="droppings">Tax is not included in the prices listed on the pricing page. Tax will be included in your billing receipts.</p>
     </div>
     <p id="got">Got additional questions?</p>
     <p id="we">We would love to have a chat with you.</p>
@@ -256,18 +280,66 @@ export default {
   },
   data(){
     return {
-    active: false
+    active: false,
+    active1: false,
+    active2: false,
+    active3: false,
+    active4: false,
+    active5: false,
+    active6: false
     }
   },
   methods: {
       toggle () {
         this.active = !this.active
+      },
+      toggle1 () {
+        this.active1 = !this.active1
+      },
+      toggle2 () {
+        this.active2 = !this.active2
+      },
+      toggle3 () {
+        this.active3 = !this.active3
+      },
+      toggle4 () {
+        this.active4 = !this.active4
+      },
+      toggle5 () {
+        this.active5 = !this.active5
+      },
+      toggle6 () {
+        this.active6 = !this.active6
       }
     }
 }
 </script>
 
 <style scoped>
+.robincontainer{
+margin-left: 49px;
+margin-right: 120px;
+}
+
+.routes{
+width: 640px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin: auto auto auto auto;
+padding: auto 0 auto 0;
+}
+
+.routes2{
+width: 225px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin: auto 49px auto 0;
+padding: auto 0 auto 0;
+align-items: center;
+}
+
 .droppings{
 font-family: 'Google Sans';
 font-style: normal;
@@ -319,7 +391,6 @@ font-size: 14px;
 line-height: 16px;
 color: #000000;
 opacity: 0.6;
-margin-left: 66px;
 }
 
 .home1{
@@ -331,7 +402,7 @@ font-size: 14px;
 line-height: 16px;
 color: #000000;
 opacity: 0.2;
-margin-left: 151px;
+
 }
 
 .home2{
@@ -342,7 +413,6 @@ font-size: 14px;
 line-height: 18px;
 text-align: center;
 color: #476BD2;
-margin-left: 148px;
 text-decoration: none;
 }
 
@@ -351,7 +421,6 @@ width: 131px;
 height: 40px;
 background: #476BD2;
 border-radius: 30.5px;
-margin-left: 24px;
 text-align: center;
 }
 
@@ -368,7 +437,6 @@ line-height: 40px;
 }
 
 #robin{
-padding-left: 79px;
 margin-block-start: 0;
 margin-block-end: 0;
 }
@@ -714,7 +782,7 @@ text-align: center;
 text-transform: uppercase;
 color: #000000;
 opacity: 0.4;
-margin-top: 120px;
+margin-top: 91px;
 }
 
 .screenshot{
@@ -732,7 +800,7 @@ max-width: 1238px;
 height: auto;
 background: #F5F7FC;
 border-radius: 25px;
-margin: 95px auto 0 auto;
+margin: 91px auto 0 auto;
 padding-bottom: 116px
 }
 
@@ -973,7 +1041,7 @@ align-items: center;
 .secondone{
 display: flex;
 flex-direction: row;
-justify-content: center;
+justify-content: space-evenly;
 width: 48%;
 }
 
@@ -1063,7 +1131,7 @@ margin-right: 25px;
 hr.bluerule{
 width: 1100px;
 opacity: 0.1;
-border: 1px solid #FFFFFF;
+color: #FFFFFF;
 margin-block-start: 0;
 margin-block-end: 0;
 margin-top: 98px;
@@ -1073,7 +1141,7 @@ text-align: center;
 hr.lastrule{
 width: 1100px;
 opacity: 0.1;
-border: 1px solid #FFFFFF;
+color: #FFFFFF;
 text-align: center;
 }
 
@@ -1082,15 +1150,6 @@ display: flex;
 width: 100%;
 height: 308px;
 flex-direction: row;
-}
-
-.lastflex{
-display: flex;
-flex-direction: row;   
-width: 100%;
-}
-
-.rob{
 }
 
 .robdets1{
@@ -1138,6 +1197,8 @@ margin-top: 50px;
 }
 
 #robin1{
+margin-block-start: 0;
+margin-block-end: 0;
 margin: 43px auto 0 144px;
 }
 
@@ -1323,63 +1384,6 @@ height: auto;
 margin-top: 46px;
 }
 
-.home{
-margin-block-start: 0;
-margin-block-end: 0;
-text-decoration: none;
-font-family: 'Zona Pro';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 16px;
-color: #000000;
-opacity: 0.6;
-margin-left: 4.58%;
-}
-
-.home1{
-margin-block-start: 0;
-margin-block-end: 0;
-text-decoration: none;
-font-family: 'Zona Pro';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 16px;
-color: #000000;
-opacity: 0.2;
-margin-left: 10.48%;
-}
-
-.home2{
-margin-block-start: 0;
-margin-block-end: 0;
-font-family: 'Google Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 18px;
-text-align: center;
-color: #476BD2;
-margin-left: 5.28%;
-text-decoration: none;
-}
-
-#robin{
-padding-left: 5.48%;
-margin-block-start: 0;
-margin-block-end: 0;
-}
-
-#get{
-width: 131px;
-height: 40px;
-background: #476BD2;
-border-radius: 30.5px;
-margin-left: 1.7%;
-text-align: center;
-}
-
 .top{
 position: fixed;
 width: 100%;
@@ -1401,8 +1405,8 @@ margin-block-start: 0;
 margin-block-end: 0;
 display: flex;
 flex-direction: column;
-margin-right: 0;
-margin-left: 22%;
+margin-right: auto;
+margin-left: auto;
 margin-bottom: 0;
 }
 
@@ -1411,12 +1415,12 @@ margin-block-start: 0;
 margin-block-end: 0;
 display: flex;
 flex-direction: column;
-margin-right: 0;
+margin-right: auto;
 margin-bottom: 0
 }
 
 #robin1{
-margin: 43px auto 0 ;
+margin: 43px auto 0 auto ;
 }
 
 .specialtext{
