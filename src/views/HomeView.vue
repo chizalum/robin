@@ -155,49 +155,49 @@
     <p id="ship">Ship in-app chat messaging with all the features your users expect.</p>
     <div class="dropcontent dropcontent1" @click="toggle1">
       <p class="droptext">How is MAU calculated?</p>
-      <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask">
+      <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask" :class="{available1:available1}">
     </div>
     <div class="droppingsblock" v-if="active1">
       <p class="droppings">Tax is not included in the prices listed on the pricing page. Tax will be included in your billing receipts.</p>
     </div>
     <div class="dropcontent" @click="toggle2">
       <p class="droptext">What is the difference between Starter, Pro, and Enterprise plans?</p>
-      <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask">
+      <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask" :class="{available2:available2}">
     </div>
     <div class="droppingsblock" v-if="active2" >
       <p class="droppings">Tax is not included in the prices listed on the pricing page. Tax will be included in your billing receipts.</p>
     </div>
     <div class="dropcontent" @click="toggle3">
       <p class="droptext">What happens if I hit my MAU limit?</p>
-      <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask">
+      <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask" :class="{available3:available3}">
     </div>
     <div class="droppingsblock" v-if="active3">
       <p class="droppings">Tax is not included in the prices listed on the pricing page. Tax will be included in your billing receipts.</p>
     </div>
     <div class="dropcontent" @click="toggle4">
       <p class="droptext">How do I purchase higher levels of support?</p>
-      <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask">
+      <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask" :class="{available4:available4}">
     </div>
     <div class="droppingsblock" v-if="active4">
       <p class="droppings">Tax is not included in the prices listed on the pricing page. Tax will be included in your billing receipts.</p>
     </div>
     <div class="dropcontent" @click="toggle5">
       <p class="droptext">What other limits do I need to be aware of?</p>
-      <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask">
+      <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask" :class="{available5:available5}">
     </div>
     <div class="droppingsblock" v-if="active5">
       <p class="droppings">Tax is not included in the prices listed on the pricing page. Tax will be included in your billing receipts.</p>
     </div>
     <div class="dropcontent" @click="toggle6">
       <p class="droptext">Is every feature automatically included in the enterprise plan?</p>
-      <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask">
+      <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask" :class="{available6:available6}">
     </div>
     <div class="droppingsblock" v-if="active6">
       <p class="droppings">Tax is not included in the prices listed on the pricing page. Tax will be included in your billing receipts.</p>
     </div>
     <div class="dropcontent" @click="toggle">
       <p class="droptext">Do the prices listed on the pricing page include tax?</p>
-      <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask">
+      <img src="@/assets/Mask.png" alt="dropdown arrow" class="mask" :class="{available:available}">
     </div>
     <div class="droppingsblock" v-if="active">
       <p class="droppings">Tax is not included in the prices listed on the pricing page. Tax will be included in your billing receipts.</p>
@@ -280,6 +280,12 @@ export default {
   },
   data(){
     return {
+    available: false,
+    available1: false,
+    available3: false,
+    available4: false,
+    available5: false,
+    available6: false,
     active: false,
     active1: false,
     active2: false,
@@ -291,31 +297,66 @@ export default {
   },
   methods: {
       toggle () {
-        this.active = !this.active
+        this.active = !this.active;
+        this.available = !this.available
       },
       toggle1 () {
-        this.active1 = !this.active1
+        this.active1 = !this.active1;
+        this.available1 = !this.available1
       },
       toggle2 () {
-        this.active2 = !this.active2
+        this.active2 = !this.active2;
+        this.available2 = !this.available2
       },
       toggle3 () {
-        this.active3 = !this.active3
+        this.active3 = !this.active3;
+        this.available3 = !this.available3
       },
       toggle4 () {
-        this.active4 = !this.active4
+        this.active4 = !this.active4;
+        this.available4 = !this.available4
       },
       toggle5 () {
-        this.active5 = !this.active5
+        this.active5 = !this.active5;
+        this.available5 = !this.available5
       },
       toggle6 () {
-        this.active6 = !this.active6
+        this.active6 = !this.active6;
+        this.available6 = !this.available6
       }
     }
 }
 </script>
 
 <style scoped>
+.available{
+transform: rotate(180deg);
+}
+
+.available1{
+transform: rotate(180deg);
+}
+
+.available2{
+transform: rotate(180deg);
+}
+
+.available3{
+transform: rotate(180deg);
+}
+
+.available4{
+transform: rotate(180deg);
+}
+
+.available5{
+transform: rotate(180deg);
+}
+
+.available6{
+transform: rotate(180deg);
+}
+
 .robincontainer{
 margin-left: 49px;
 margin-right: 120px;
@@ -510,26 +551,18 @@ border-radius: 25px;
 }
 
 #box1:hover{
-width: 345px;
-height: 519px;
 border: 1px solid #d79232;
 }
 
 #box2:hover{
-width: 345px;
-height: 519px;
 border: 1px solid #d79232;
 }
 
 #box3:hover{
-width: 345px;
-height: 519px;
 border: 1px solid #d79232;
 }
 
 #box4:hover{
-width: 345px;
-height: 519px;
 border: 1px solid #d79232;
 }
 
