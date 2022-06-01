@@ -570,7 +570,6 @@ font-weight: 700;
 font-size: 18px;
 line-height: 19px;
 color: #EA8D51;
-display: inline-block;
 margin: 36px auto 0 28px;;
 }
 
@@ -1051,7 +1050,6 @@ font-weight: 700;
 font-size: 43px;
 line-height: 51px;
 color: #FFFFFF;
-padding-left: 144px;
 margin: 84px auto 0 144px;
 Width: 500px;
 }
@@ -1066,7 +1064,6 @@ color: #FFFFFF;
 opacity: 0.7;
 margin-block-start: 0;
 margin-block-end: 0;
-padding-left: 144px;
 margin: 23px auto 0 144px;
 max-Width: 500px;
 }
@@ -1455,9 +1452,32 @@ justify-content: space-evenly;
 align-items: center;
 width: auto;
 }
+
+#ready{
+font-family: 'Zona Pro';
+font-style: normal;
+font-weight: 700;
+font-size: 43px;
+line-height: 51px;
+color: #FFFFFF;
+margin: 84px auto 0 0;
+Width: 500px;
 }
 
-@media (max-width: 4440px){
+#love{
+font-family: 'Google Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 35px;
+color: #FFFFFF;
+opacity: 0.7;
+margin: 23px auto 0 0;
+max-Width: 500px;
+}
+}
+
+@media (max-width: 440px){
 #talkbtn{
 width: 147px;
 height: 50px;
@@ -1492,7 +1512,7 @@ font-size: 43px;
 line-height: 51px;
 color: #FFFFFF;
 margin: 84px auto 0 0;
-Width: 400px;
+max-Width: 400px;
 }
 
 #love{
