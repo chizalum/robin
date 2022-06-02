@@ -373,7 +373,7 @@ margin-right: 120px;
 }
 
 .routes{
-width: 640px;
+width: 730px;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
@@ -1213,7 +1213,7 @@ margin: 0 127px 0 auto;
 
 .robtext{
 text-decoration: none;
-width: 100px;
+width: 115px;
 font-family: 'Zona Pro';
 font-style: normal;
 font-weight: 600;
@@ -1287,7 +1287,7 @@ font-size: 14px;
 line-height: 18px;
 color: #FFFFFF;
 opacity: 0.3;
-margin: 0 530px 0 144px; 
+margin: 0 500px 0 144px; 
 }
 
 .specialflex{
@@ -1298,6 +1298,25 @@ overflow-wrap: normal;
 
 
 @media (max-width: 1240px) {
+
+.routes{
+width: 730px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin: 10px auto 10px 49px;
+padding: auto 0 auto 0;
+}
+
+.routes2{
+width: 225px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin: auto 49px auto 49px;
+padding: auto 0 auto 0;
+align-items: center;
+}
 
 .boxes{
 margin: 0 auto 0 auto;
