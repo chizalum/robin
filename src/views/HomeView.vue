@@ -9,20 +9,20 @@
         <router-link to="/" class="home">Use Cases</router-link>
         <router-link to="/" class="home">SDKs</router-link>
         <router-link to="/" class="home">Enterprise</router-link>
-        <router-link to="/" class="home" tag="button">Try Demo</router-link>
+        <router-link to="/" class="home">Try Demo</router-link>
       </div>
       <div class="routes2">
         <router-link to="/" class="home2">Sign In</router-link> 
-        <div id="get">
-          <router-link to="/" id="gettext" tag="button">Get Started</router-link>
-        </div>
+        <button id="get">
+          <router-link to="/" id="gettext">Get Started</router-link>
+        </button>
       </div>
   </div>
   <div class="firstdiv">
     <h1 id="simple">Simple & Transparent Pricing. No surprises.</h1>
     <h3 id='the'>The only tool you will need to power conversations. </h3>
     <button id="btn1">
-    Start Free Trial
+    <router-link to="/" id="starter">Start Free Trial</router-link>
     <img src="@/assets/Arrow.png" alt="arrow image" id="ticker">
     </button>
   </div>
@@ -53,7 +53,7 @@
         </div>
         <hr class="double">
         <div class="last">
-          <p class="lasttext">Get Started</p>
+          <router-link to="/" class="lasttext">Get Started</router-link>
           <img src="@/assets/lastarrow.png" alt="arrow image" class="lastarrow">
         </div>
     </div>
@@ -83,7 +83,7 @@
         </div>
         <hr class="double">
         <div class="last">
-          <p class="lasttext">Get Started</p>
+          <router-link to="/" class="lasttext">Get Started</router-link>
           <img src="@/assets/lastarrow.png" alt="arrow image" class="lastarrow">
         </div>
     </div>
@@ -113,7 +113,7 @@
         </div>
         <hr class="double">
         <div class="last">
-          <p class="lasttext">Get Started</p>
+          <router-link to="/" class="lasttext">Get Started</router-link>
           <img src="@/assets/lastarrow.png" alt="arrow image" class="lastarrow">
         </div>
     </div>
@@ -143,7 +143,7 @@
         </div>
         <hr class="double">
         <div class="last">
-          <p class="lasttext">Get Started</p>
+          <router-link to="/" class="lasttext">Get Started</router-link>
           <img src="@/assets/lastarrow.png" alt="arrow image" class="lastarrow">
         </div>
     </div>
@@ -204,20 +204,20 @@
     </div>
     <p id="got">Got additional questions?</p>
     <p id="we">We would love to have a chat with you.</p>
-    <div id="reach">
-      <p id="contact">Contact Support</p>
+    <button id="reach">
+      <router-link to="/" id="contact">Contact Support</router-link> 
       <img src="@/assets/bluearrow.png" alt="arrow" id="bluearrow">
-    </div>
+    </button>
   </div>
   <div class="chatbox">
     <div class="chatters">
       <p id="chattext">CHAT</p>
       <h2 id="see">See the all-in-one chat system in action</h2>
       <p id="only">The only tool you will need to power conversations and interactions on your product. <span id="go">Go live within days.</span></p>
-      <div class="startbtn">
-        <p id="start">Start Demo</p>
+      <button class="startbtn">
+        <router-link to="/" id="start">Start Demo</router-link>
         <img src="@/assets/blackarrow.png" alt="arrow" id="blackarrow">
-      </div>
+      </button>
     </div>
     <div class="chatscontainer">
       <img src="@/assets/chats.png" alt="chatbox" id="chats">
@@ -329,6 +329,16 @@ export default {
 </script>
 
 <style scoped>
+#starter{
+text-decoration: none;
+font-family: 'Google Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+color: #FFFFFF
+}
+
 .available{
 transform: rotate(180deg);
 }
@@ -462,6 +472,7 @@ width: 131px;
 height: 40px;
 background: #476BD2;
 border-radius: 30.5px;
+border-width: 0;
 text-align: center;
 }
 
@@ -489,7 +500,7 @@ text-align: center;
 
 #simple{
 width: 100%;
-max-width: 720px;
+max-width: 765px;
 margin: 228px auto 28px auto;
 font-family: 'Zona Pro';
 font-style: normal;
@@ -517,6 +528,7 @@ opacity: 0.8;
 width: 207px;
 height: 50px;
 background: #4568D1;
+border-width: 0;
 border-radius: 30.5px;
 margin: 32px auto 91px auto;
 font-family: 'Google Sans';
@@ -779,6 +791,7 @@ line-height: 20px;
 color: #4568D1;
 margin-block-start: 0;
 margin-block-end: 0;
+text-decoration: none;
 }
 
 .lastarrow{
@@ -931,9 +944,11 @@ display: flex;
 flex-direction: row;
 align-items: center;
 margin: 20px auto 0 auto;
+border-width: 0;
 }
 
 #contact{
+text-decoration: none;
 font-family: 'Google Sans';
 font-style: normal;
 font-weight: 700;
@@ -1018,6 +1033,7 @@ font-weight: 700;
 }
 
 .startbtn{
+box-sizing: border-box;
 width: 207px;
 height: 50px;
 border: 1px solid #000000;
@@ -1026,6 +1042,7 @@ margin: 82px auto auto 217px;
 display: flex;
 flex-direction: row;
 align-items: center;
+background: #FFFFFF;
 }
 
 #start{
@@ -1036,6 +1053,7 @@ font-size: 16px;
 line-height: 20px;
 color: #333333;
 padding-left: 36px;
+text-decoration: none;
 }
 
 #blackarrow{
@@ -1269,7 +1287,7 @@ font-size: 14px;
 line-height: 18px;
 color: #FFFFFF;
 opacity: 0.3;
-margin: 0 577px 0 144px; 
+margin: 0 530px 0 144px; 
 }
 
 .specialflex{
