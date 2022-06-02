@@ -1596,5 +1596,37 @@ opacity: 0.7;
 margin: 23px auto 0 0;
 max-Width: 400px;
 }
+
+.robincontainer{
+margin-left: 29px;
+margin-right: 29px;
+}
+
+.routes{
+width: 730px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin: 10px auto 10px 29px;
+padding: auto 0 auto 0;
+}
+
+.routes2{
+width: 225px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin: auto 49px auto 29px;
+padding: auto 0 auto 0;
+align-items: center;
+}
+
+.home{
+margin-right: 10px;
+}
+
+.home1{
+margin-right: 10px;
+}
 }
 </style>
