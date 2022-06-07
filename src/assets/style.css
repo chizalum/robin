@@ -172,7 +172,7 @@
     text-align: center;
     }
     
-    #simple{
+    .simple{
     width: 100%;
     max-width: 765px;
     margin: 228px auto 28px auto;
@@ -185,7 +185,7 @@
     color: #000000;
     }
     
-    #the{
+    .the{
     width: 100%;
     height: 25px;
     font-family: 'Google Sans';
@@ -226,7 +226,7 @@
     justify-content: space-around;
     }
     
-    #box1{
+    .box1{
     box-sizing: border-box;
     width: 310px;
     height: 499px;
@@ -235,33 +235,23 @@
     border-radius: 25px;
     }
     
-    #box1:hover{
+    .box1:hover{
     border: 1px solid #d79232;
     }
     
-    #box2:hover{
+    .box2:hover{
     border: 1px solid #d79232;
     }
     
-    #box3:hover{
+    .box3:hover{
     border: 1px solid #d79232;
     }
     
-    #box4:hover{
+    .box4:hover{
     border: 1px solid #d79232;
     }
     
-    #box2{
-    box-sizing: border-box;
-    width: 310px;
-    height: 499px;
-    background: #F5F7FC;
-    border: 1px solid #4568D1;
-    border-radius: 25px;
-    margin-left: 18px;
-    }
-    
-    #box3{
+    .box2{
     box-sizing: border-box;
     width: 310px;
     height: 499px;
@@ -271,7 +261,17 @@
     margin-left: 18px;
     }
     
-    #box4{
+    .box3{
+    box-sizing: border-box;
+    width: 310px;
+    height: 499px;
+    background: #F5F7FC;
+    border: 1px solid #4568D1;
+    border-radius: 25px;
+    margin-left: 18px;
+    }
+    
+    .box4{
     box-sizing: border-box;
     width: 310px;
     height: 499px;
@@ -488,7 +488,7 @@
     font-weight: 700;
     }
     
-    #trust{
+    .trust{
     font-family: 'Zona Pro';
     font-style: normal;
     font-weight: 700;
@@ -520,7 +520,7 @@
     padding-bottom: 116px
     }
     
-    #common{
+    .common{
     font-family: 'Zona Pro';
     font-style: normal;
     font-weight: 700;
@@ -534,7 +534,7 @@
     padding-top: 71px;
     }
     
-    #ship{
+    .ship{
     width: 362px;
     height: 60px;
     font-family: 'Google Sans';
@@ -584,7 +584,7 @@
     margin: 39px 39px 39px;
     }
     
-    #got{
+    .got{
     font-family: 'Zona Pro';
     font-style: normal;
     font-weight: 700;
@@ -595,7 +595,7 @@
     margin-top: 68px;
     }
     
-    #we{
+    .we{
     font-family: 'Google Sans';
     font-style: normal;
     font-weight: 400;
@@ -607,7 +607,7 @@
     text-align: center;
     }
     
-    #reach{
+    .reach{
     box-sizing: border-box;
     width: 207px;
     height: 50px;
@@ -618,9 +618,10 @@
     align-items: center;
     margin: 20px auto 0 auto;
     border-width: 0;
+    text-decoration: none;
     }
     
-    #contact{
+    .contact{
     text-decoration: none;
     font-family: 'Google Sans';
     font-style: normal;
@@ -632,7 +633,7 @@
     padding-right: 23px;
     }
     
-    #bluearrow{
+    .bluearrow{
     width: 10px;
     }
     
@@ -656,12 +657,12 @@
     width: 50%;
     }
     
-    #chats{
+    .chats{
     width: 100%;
     margin-top: 46px;
     }
     
-    #chattext{
+    .chattext{
     font-family: 'Zona Pro';
     font-style: normal;
     font-weight: 700;
@@ -674,7 +675,7 @@
     margin: 119px auto 0 217px;
     }
     
-    #see{
+    .see{
     font-family: 'Zona Pro';
     font-style: normal;
     font-weight: 700;
@@ -687,7 +688,7 @@
     max-width: 329px;
     }
     
-    #only{
+    .only{
     margin-block-start: 0;
     margin-block-end: 0;
     font-family: 'Google Sans';
@@ -701,7 +702,7 @@
     max-width: 342px;
     }
     
-    #go{
+    .go{
     font-weight: 700;
     }
     
@@ -716,9 +717,10 @@
     flex-direction: row;
     align-items: center;
     background: #FFFFFF;
+    text-decoration: none;
     }
     
-    #start{
+    .start{
     font-family: 'Google Sans';
     font-style: normal;
     font-weight: 700;
@@ -729,7 +731,7 @@
     text-decoration: none;
     }
     
-    #blackarrow{
+    .blackarrow{
     width: 10px;
     height: 8px;
     margin-left: 52px;
@@ -1033,7 +1035,7 @@
     flex-wrap: wrap;
     } 
     
-    #box1{
+    .box1{
     box-sizing: border-box;
     width: 45%;
     height: 499px;
@@ -1043,7 +1045,7 @@
     margin: 10px 0 0 0;
     } 
     
-    #box2{
+    .box2{
     box-sizing: border-box;
     width: 45%;
     height: 499px;
@@ -1053,7 +1055,7 @@
     margin: 10px 0 0 0;
     }
     
-    #box3{
+    .box3{
     box-sizing: border-box;
     width: 45%;
     height: 499px;
@@ -1063,7 +1065,7 @@
     margin: 10px 0 0 0;
     }
     
-    #box4{
+    .box4{
     box-sizing: border-box;
     width: 45%;
     height: 499px;
@@ -1073,7 +1075,7 @@
     margin: 10px 0 0 0;
     }
     
-    #chattext{
+    .chattext{
     font-family: 'Zona Pro';
     font-style: normal;
     font-weight: 700;
@@ -1087,7 +1089,7 @@
     width: 329px
     }
     
-    #see{
+    .see{
     font-family: 'Zona Pro';
     font-style: normal;
     font-weight: 700;
@@ -1100,7 +1102,7 @@
     max-width: 329px;
     }
     
-    #only{
+    .only{
     margin-block-start: 0;
     margin-block-end: 0;
     font-family: 'Google Sans';
@@ -1123,6 +1125,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    text-decoration: none;
     }
     
     .dropcontent{
@@ -1147,7 +1150,7 @@
     margin-block-end: 0;
     }
     
-    #chats{
+    .chats{
     width: 100%;
     height: auto;
     margin-top: 46px;
@@ -1276,7 +1279,7 @@
     justify-content: space-evenly;
     }
     
-    #box1{
+    .box1{
     box-sizing: border-box;
     width: 310px;
     height: 499px;
@@ -1286,7 +1289,7 @@
     margin: 0 auto 0 auto;
     }
     
-    #box2{
+    .box2{
     box-sizing: border-box;
     width: 310px;
     height: 499px;
@@ -1296,7 +1299,7 @@
     margin: 10px auto 0 auto;
     }
     
-    #box3{
+    .box3{
     box-sizing: border-box;
     width: 310px;
     height: 499px;
@@ -1306,7 +1309,7 @@
     margin: 10px auto 0 auto;
     }
     
-    #box4{
+    .box4{
     box-sizing: border-box;
     width: 310px;
     height: 499px;

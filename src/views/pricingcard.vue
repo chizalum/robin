@@ -1,6 +1,6 @@
 <template>
   <div class="boxes">
-    <div id="box1">
+    <div class="box1">
         <p class="maroon">Starter</p>
         <p class="dollars">$69/mo</p>
         <hr class="single">
@@ -30,7 +30,7 @@
           <img src="@/assets/lastarrow.png" alt="arrow image" class="lastarrow">
         </div>
     </div>
-    <div id="box2">
+    <div class="box2">
       <p class="maroon">Growth</p>
       <p class="dollars">$389/mo</p>
       <hr class="single">
@@ -60,7 +60,7 @@
           <img src="@/assets/lastarrow.png" alt="arrow image" class="lastarrow">
         </div>
     </div>
-    <div id="box3">
+    <div class="box3">
       <p class="maroon">Pro</p>
       <p class="dollars">$799/mo</p>
       <hr class="single">
@@ -90,7 +90,7 @@
           <img src="@/assets/lastarrow.png" alt="arrow image" class="lastarrow">
         </div>
     </div>
-    <div id="box4">
+    <div class="box4">
       <p class="maroon">Enterprise</p>
       <p class="dollars">Customized</p>
       <hr class="single">
